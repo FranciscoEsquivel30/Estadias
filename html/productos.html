@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catálogo | Materiales San José</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<link rel="stylesheet" href="../css/productos.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav-container">
+  <div class="container">
+    <div class="nav-wrapper">
+      <div class="nav-logo">
+        <img src="../img/logo.jpg" alt="Materiales San José" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="nav-logo-text" style="display:none">Materiales <span>San José</span></span>
+      </div>
+      <div class="nav-menu-desktop">
+        <a href="../index.html">Inicio</a>
+        <a href="../index.html#materiales">Materiales</a>
+        <a href="../index.html#contacto">Contacto</a>
+        <a href="../html/productos.html" class="active">Catálogo</a>
+      </div>
+      <button id="mobile-menu-button" aria-label="Menú">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="mobile-menu-content">
+      <a href="../index.html">Inicio</a>
+      <a href="../index.html#contacto">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <!-- Floating shapes -->
+  <div class="float-shape" style="top:20%;left:8%;--dur:7s"><span class="shape-icon" style="--size:22px;--color:rgba(96,165,250,0.5)">◆</span></div>
+  <div class="float-shape" style="top:30%;right:10%;--dur:9s;--delay:-3s"><span class="shape-icon" style="--size:16px;--color:rgba(249,115,22,0.5)">✦</span></div>
+  <div class="float-shape" style="bottom:20%;left:12%;--dur:11s;--delay:-5s"><div class="shape-ring" style="--size:18px;--color:rgba(96,165,250,0.4)"></div></div>
+  <div class="float-shape" style="bottom:25%;right:9%;--dur:8s;--delay:-2s"><div class="shape-diamond" style="--size:12px;--color:rgba(249,115,22,0.35)"></div></div>
+  <div class="float-shape" style="top:15%;right:25%;--dur:6s;--delay:-1s"><span class="shape-icon" style="--size:18px;--color:rgba(96,165,250,0.3)">⬡</span></div>
+
+  <div class="container" style="position:relative;z-index:2">
+    <div class="page-header-badge">📦 Inventario Completo</div>
+    <h1>Catálogo de Materiales</h1>
+    <p>Todos los materiales disponibles para tu obra. Filtra por categoría y solicita tu cotización.</p>
+  </div>
+</div>
+
+<!-- FILTER BAR -->
+<div class="filter-wrap">
+  <div class="filter-label">✦ Explorar por categoría ✦</div>
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterCat('all',this)">🔲 Todos <span class="filter-count">47</span></button>
+    <button class="filter-btn" onclick="filterCat('agregados',this)">🪨 Mat. Construcción <span class="filter-count">8</span></button>
+    <button class="filter-btn" onclick="filterCat('acero',this)">⚙️ Acero <span class="filter-count">10</span></button>
+    <button class="filter-btn" onclick="filterCat('mamposteria',this)">🧱 Mampostería <span class="filter-count">5</span></button>
+    <button class="filter-btn" onclick="filterCat('losa',this)">🏗️ Losas <span class="filter-count">4</span></button>
+    <button class="filter-btn" onclick="filterCat('tuberia',this)">🔩 Tubería <span class="filter-count">3</span></button>
+    <button class="filter-btn" onclick="filterCat('cemento',this)">🧪 Aglomerantes <span class="filter-count">7</span></button>
+    <button class="filter-btn" onclick="filterCat('servicios',this)">🚜 Servicios <span class="filter-count">8</span></button>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="products-section">
+  <div class="container">
+    <div class="showing-wrap">
+      <span class="showing-badge">✦ Mostrando <span class="cnt" id="showingCount">47</span> materiales</span>
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+
+      <!-- AGREGADOS -->
+      <div class="product-card agregados" onclick="openModal('Arena','Ideal para mezclas de concreto, morteros y rellenos. Disponible en diferentes granulometrías.','../img/arena.jpg','agregados')">
+        <img src="../img/IMG47.jpg" alt="Arena">
+        <div class="product-info"><h3>Arena</h3><span class="product-badge badge-agregados">Construcción</span></div>
+      </div>
+      <div class="product-card agregados" onclick="openModal('Grava','Grava triturada y rodada para concreto, drenajes y cimentaciones.','../img/grava.jpg','agregados')">
+        <img src="../img/IMG46.jpg" alt="Grava">
+        <div class="product-info"><h3>Grava</h3><span class="product-badge badge-agregados">Construcción</span></div>
+      </div>
+      <div class="product-card agregados" onclick="openModal('Piedra','Piedra para cimentaciones, muros de contención y revestimientos.','../img/piedra.jpg','agregados')">
+        <img src="../img/IMG44.jpg" alt="Piedra">
+        <div class="product-info"><h3>Piedra</h3><span class="product-badge badge-agregados">Construcción</span></div>
+      </div>
+      <div class="product-card agregados" onclick="openModal('Tepetate','Material de relleno y compactación para bases y subbases.','../img/Tepetate.jpg','agregados')">
+        <img src="../img/IMG48.jpg" alt="Tepetate">
+        <div class="product-info"><h3>Tepetate</h3><span class="product-badge badge-agregados">Construcción</span></div>
+      </div>
+      <div class="product-card agregados" onclick="openModal('Jal','Material ligero para rellenos y mezclas especiales.','../img/material.jpg','agregados')">
+        <img src="../img/material.jpg" alt="Jal">
+        <div class="product-info"><h3>Jal</h3><span class="product-badge badge-agregados">Construcción</span></div>
+      </div>
+      <div class="product-card agregados" onclick="openModal('Tierra fértil','Tierra negra para jardines, huertos y áreas verdes.','../img/material.jpg','agregados')">
+        <img src="../img/material.jpg" alt="Tierra fértil">
+        <div class="product-info"><h3>Tierra fértil</h3><span class="product-badge badge-agregados">Construcción</span></div>
+      </div>
+      <div class="product-card agregados" onclick="openModal('Sello','Material fino para sellado de juntas y acabados de pisos.','../img/material.jpg','agregados')">
+        <img src="../img/material.jpg" alt="Sello">
+        <div class="product-info"><h3>Sello</h3><span class="product-badge badge-agregados">Construcción</span></div>
+      </div>
+      <div class="product-card agregados" onclick="openModal('Screen','Gravilla fina para filtros, drenajes y pisos decorativos.','../img/material.jpg','agregados')">
+        <img src="../img/material.jpg" alt="Screen">
+        <div class="product-info"><h3>Screen</h3><span class="product-badge badge-agregados">Construcción</span></div>
+      </div>
+
+      <!-- ACERO -->
+      <div class="product-card acero" onclick="openModal('Varilla 3/8 pulgada','Varilla corrugada de 3/8 pulgada para trabes, castillos y cadenas.','../img/varilla.jpg','acero')">
+        <img src="../img/varilla.jpg" alt="Varilla">
+        <div class="product-info"><h3>Varilla 3/8"</h3><span class="product-badge badge-acero">Acero</span></div>
+      </div>
+      <div class="product-card acero" onclick="openModal('Varilla 1/2 pulgada','Varilla corrugada de 1/2 pulgada para estructuras de mayor carga.','../img/varilla.jpg','acero')">
+        <img src="../img/varilla.jpg" alt="Varilla">
+        <div class="product-info"><h3>Varilla 1/2"</h3><span class="product-badge badge-acero">Acero</span></div>
+      </div>
+      <div class="product-card acero" onclick="openModal('Armex reforzado cadena','Malla prefabricada de alta resistencia para cadenas de cimentación.','../img/material.jpg','acero')">
+        <img src="../img/material.jpg" alt="Armex">
+        <div class="product-info"><h3>Armex ref. cadena</h3><span class="product-badge badge-acero">Acero</span></div>
+      </div>
+      <div class="product-card acero" onclick="openModal('Armex reforzado castillo','Armex prefabricado para castillos de muros de carga.','../img/material.jpg','acero')">
+        <img src="../img/material.jpg" alt="Armex">
+        <div class="product-info"><h3>Armex ref. castillo</h3><span class="product-badge badge-acero">Acero</span></div>
+      </div>
+      <div class="product-card acero" onclick="openModal('Armex sencillo cadena','Malla simple para cadenas en proyectos residenciales.','../img/material.jpg','acero')">
+        <img src="../img/material.jpg" alt="Armex">
+        <div class="product-info"><h3>Armex s. cadena</h3><span class="product-badge badge-acero">Acero</span></div>
+      </div>
+      <div class="product-card acero" onclick="openModal('Armex sencillo castillo','Armex simple para castillos en proyectos ligeros.','../img/material.jpg','acero')">
+        <img src="../img/material.jpg" alt="Armex">
+        <div class="product-info"><h3>Armex s. castillo</h3><span class="product-badge badge-acero">Acero</span></div>
+      </div>
+      <div class="product-card acero" onclick="openModal('Malla electrosoldada sencilla','Malla de acero para losas y contrapisos ligeros.','../img/malla.jpg','acero')">
+        <img src="../img/malla.jpg" alt="Malla">
+        <div class="product-info"><h3>Malla electrosoldada s.</h3><span class="product-badge badge-acero">Acero</span></div>
+      </div>
+      <div class="product-card acero" onclick="openModal('Malla electrosoldada reforzada','Malla de alta resistencia para losas industriales y estacionamientos.','../img/malla.jpg','acero')">
+        <img src="../img/malla.jpg" alt="Malla">
+        <div class="product-info"><h3>Malla electrosoldada r.</h3><span class="product-badge badge-acero">Acero</span></div>
+      </div>
+      <div class="product-card acero" onclick="openModal('Anillo de alambrón','Alambrón en rollo para armado de estructuras y cercas.','../img/material.jpg','acero')">
+        <img src="../img/material.jpg" alt="Alambrón">
+        <div class="product-info"><h3>Anillo de alambrón</h3><span class="product-badge badge-acero">Acero</span></div>
+      </div>
+      <div class="product-card acero" onclick="openModal('Alambre recocido','Alambre suave para amarre de varilla en estructuras de concreto.','../img/alambre.jpg','acero')">
+        <img src="../img/alambre.jpg" alt="Alambre">
+        <div class="product-info"><h3>Alambre recocido</h3><span class="product-badge badge-acero">Acero</span></div>
+      </div>
+
+      <!-- MAMPOSTERÍA -->
+      <div class="product-card mamposteria" onclick="openModal('Block hueco 12x20x40','Block estándar de hormigón para muros interiores y exteriores.','../img/block.jpg','mamposteria')">
+        <img src="../img/block.jpg" alt="Block">
+        <div class="product-info"><h3>Block 12x20x40</h3><span class="product-badge badge-mamposteria">Mampostería</span></div>
+      </div>
+      <div class="product-card mamposteria" onclick="openModal('Block hueco 15x20x40','Block de mayor espesor para muros estructurales y bardas.','../img/block.jpg','mamposteria')">
+        <img src="../img/block.jpg" alt="Block">
+        <div class="product-info"><h3>Block 15x20x40</h3><span class="product-badge badge-mamposteria">Mampostería</span></div>
+      </div>
+      <div class="product-card mamposteria" onclick="openModal('Tabicón','Pieza de concreto sólido de alta resistencia para muros y cimientos.','../img/material.jpg','mamposteria')">
+        <img src="../img/material.jpg" alt="Tabicón">
+        <div class="product-info"><h3>Tabicón</h3><span class="product-badge badge-mamposteria">Mampostería</span></div>
+      </div>
+      <div class="product-card mamposteria" onclick="openModal('Ladrillo','Ladrillo recocido para muros, bardas y acabados decorativos.','../img/ladrillo.jpg','mamposteria')">
+        <img src="../img/ladrillo.jpg" alt="Ladrillo">
+        <div class="product-info"><h3>Ladrillo</h3><span class="product-badge badge-mamposteria">Mampostería</span></div>
+      </div>
+      <div class="product-card mamposteria" onclick="openModal('Cuña','Pieza de remate para esquinas y terminados en mampostería.','../img/material.jpg','mamposteria')">
+        <img src="../img/material.jpg" alt="Cuña">
+        <div class="product-info"><h3>Cuña</h3><span class="product-badge badge-mamposteria">Mampostería</span></div>
+      </div>
+
+      <!-- LOSAS -->
+      <div class="product-card losa" onclick="openModal('Vigueta sencilla','Vigueta prefabricada de concreto pretensado para losas ligeras.','../img/material.jpg','losa')">
+        <img src="../img/material.jpg" alt="Vigueta">
+        <div class="product-info"><h3>Vigueta sencilla</h3><span class="product-badge badge-losa">Losas</span></div>
+      </div>
+      <div class="product-card losa" onclick="openModal('Vigueta reforzada','Vigueta de mayor capacidad de carga para claros amplios.','../img/material.jpg','losa')">
+        <img src="../img/material.jpg" alt="Vigueta">
+        <div class="product-info"><h3>Vigueta reforzada</h3><span class="product-badge badge-losa">Losas</span></div>
+      </div>
+      <div class="product-card losa" onclick="openModal('Casetón poliestireno','Relleno ligero de poliestireno para reducir el peso en losas.','../img/material.jpg','losa')">
+        <img src="../img/material.jpg" alt="Casetón">
+        <div class="product-info"><h3>Casetón poliestireno</h3><span class="product-badge badge-losa">Losas</span></div>
+      </div>
+      <div class="product-card losa" onclick="openModal('Bovedilla de Jal','Bovedilla de jal ligero para sistemas de losa vigueta-bovedilla.','../img/material.jpg','losa')">
+        <img src="../img/material.jpg" alt="Bovedilla">
+        <div class="product-info"><h3>Bovedilla de Jal</h3><span class="product-badge badge-losa">Losas</span></div>
+      </div>
+
+      <!-- TUBERÍA -->
+      <div class="product-card tuberia" onclick="openModal('Tubería PVC','Tubería de PVC para instalaciones hidráulicas y sanitarias.','../img/material.jpg','tuberia')">
+        <img src="../img/material.jpg" alt="Tubería PVC">
+        <div class="product-info"><h3>Tubería PVC</h3><span class="product-badge badge-tuberia">Tubería</span></div>
+      </div>
+      <div class="product-card tuberia" onclick="openModal('Tubería CPVC','Tubería CPVC resistente a altas temperaturas para agua caliente.','../img/material.jpg','tuberia')">
+        <img src="../img/material.jpg" alt="Tubería CPVC">
+        <div class="product-info"><h3>Tubería CPVC</h3><span class="product-badge badge-tuberia">Tubería</span></div>
+      </div>
+      <div class="product-card tuberia" onclick="openModal('Tubería PPR','Tubería PPR de alta resistencia para sistemas de agua a presión.','../img/material.jpg','tuberia')">
+        <img src="../img/material.jpg" alt="Tubería PPR">
+        <div class="product-info"><h3>Tubería PPR</h3><span class="product-badge badge-tuberia">Tubería</span></div>
+      </div>
+
+      <!-- AGLOMERANTES -->
+      <div class="product-card cemento" onclick="openModal('Cemento','Cemento Portland gris de alta resistencia para todo tipo de obra.','../img/cemento.jpg','cemento')">
+        <img src="../img/cemento.jpg" alt="Cemento">
+        <div class="product-info"><h3>Cemento</h3><span class="product-badge badge-cemento">Aglomerantes</span></div>
+      </div>
+      <div class="product-card cemento" onclick="openModal('Mortero','Mortero premezclado para asentado de block, ladrillo y tabique.','../img/mortero.png','cemento')">
+        <img src="../img/mortero.png" alt="Mortero">
+        <div class="product-info"><h3>Mortero</h3><span class="product-badge badge-cemento">Aglomerantes</span></div>
+      </div>
+      <div class="product-card cemento" onclick="openModal('Pegapiso','Adhesivo cementicio para pisos cerámicos, porcelánicos y piedra.','../img/pegapiso.jpg','cemento')">
+        <img src="../img/pegapiso.jpg" alt="Pegapiso">
+        <div class="product-info"><h3>Pegapiso</h3><span class="product-badge badge-cemento">Aglomerantes</span></div>
+      </div>
+      <div class="product-card cemento" onclick="openModal('Pegaazulejo','Adhesivo para azulejos en paredes interiores y exteriores.','../img/material.jpg','cemento')">
+        <img src="../img/material.jpg" alt="Pegaazulejo">
+        <div class="product-info"><h3>Pegaazulejo</h3><span class="product-badge badge-cemento">Aglomerantes</span></div>
+      </div>
+      <div class="product-card cemento" onclick="openModal('Stucco','Yeso acrílico para acabados exteriores e interiores texturizados.','../img/material.jpg','cemento')">
+        <img src="../img/material.jpg" alt="Stucco">
+        <div class="product-info"><h3>Stucco</h3><span class="product-badge badge-cemento">Aglomerantes</span></div>
+      </div>
+      <div class="product-card cemento" onclick="openModal('Cal','Cal hidratada para aplanados, pintura y tratamiento de suelos.','../img/material.jpg','cemento')">
+        <img src="../img/material.jpg" alt="Cal">
+        <div class="product-info"><h3>Cal</h3><span class="product-badge badge-cemento">Aglomerantes</span></div>
+      </div>
+      <div class="product-card cemento" onclick="openModal('Yeso','Yeso para aplanados interiores, cielos rasos y molduras.','../img/yeso.png','cemento')">
+        <img src="../img/yeso.png" alt="Yeso">
+        <div class="product-info"><h3>Yeso</h3><span class="product-badge badge-cemento">Aglomerantes</span></div>
+      </div>
+
+      <!-- SERVICIOS -->
+      <div class="product-card servicios" onclick="openModal('Renta retroexcavadora','Retroexcavadora disponible por hora o día para excavaciones y movimiento de tierra.','../img/maquinaria.jpg','servicios')">
+        <img src="../img/maquinaria.jpg" alt="Retroexcavadora">
+        <div class="product-info"><h3>Renta retroexcavadora</h3><span class="product-badge badge-servicios">Servicio</span></div>
+      </div>
+      <div class="product-card servicios" onclick="openModal('Renta camión plataforma','Camión plataforma para traslado de materiales pesados y maquinaria.','../img/maquinaria.jpg','servicios')">
+        <img src="../img/maquinaria.jpg" alt="Camión">
+        <div class="product-info"><h3>Renta camión plataforma</h3><span class="product-badge badge-servicios">Servicio</span></div>
+      </div>
+      <div class="product-card servicios" onclick="openModal('Renta camión 14m³','Camión de volteo de 14 metros cúbicos para entrega de materiales a granel.','../img/maquinaria.jpg','servicios')">
+        <img src="../img/maquinaria.jpg" alt="Camión">
+        <div class="product-info"><h3>Renta camión 14m³</h3><span class="product-badge badge-servicios">Servicio</span></div>
+      </div>
+      <div class="product-card servicios" onclick="openModal('Cortadora de concreto','Corte preciso en concreto, block y pavimentos. Disponible por turno.','../img/maquinaria.jpg','servicios')">
+        <img src="../img/maquinaria.jpg" alt="Cortadora">
+        <div class="product-info"><h3>Cortadora concreto</h3><span class="product-badge badge-servicios">Servicio</span></div>
+      </div>
+      <div class="product-card servicios" onclick="openModal('Allanadora','Allanadora mecánica para acabados de pisos de concreto.','../img/maquinaria.jpg','servicios')">
+        <img src="../img/maquinaria.jpg" alt="Allanadora">
+        <div class="product-info"><h3>Allanadora</h3><span class="product-badge badge-servicios">Servicio</span></div>
+      </div>
+      <div class="product-card servicios" onclick="openModal('Apisonadora','Compactación de suelos, rellenos y bases para pavimentación.','../img/maquinaria.jpg','servicios')">
+        <img src="../img/maquinaria.jpg" alt="Apisonadora">
+        <div class="product-info"><h3>Apisonadora</h3><span class="product-badge badge-servicios">Servicio</span></div>
+      </div>
+      <div class="product-card servicios" onclick="openModal('Venta y renta de madera','Madera para cimbra, duelas, vigas y estructuras temporales de obra.','../img/material.jpg','servicios')">
+        <img src="../img/material.jpg" alt="Madera">
+        <div class="product-info"><h3>Venta y renta madera</h3><span class="product-badge badge-servicios">Servicio</span></div>
+      </div>
+      <div class="product-card servicios" onclick="openModal('Aceites y lubricantes','Lubricantes para maquinaria de construcción y mantenimiento de equipos.','../img/material.jpg','servicios')">
+        <img src="../img/material.jpg" alt="Aceites">
+        <div class="product-info"><h3>Aceites y lubricantes</h3><span class="product-badge badge-servicios">Servicio</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal-box">
+    <img class="modal-img" id="modalImg" src="" alt="">
+    <div class="modal-body">
+      <span class="modal-cat-badge" id="modalBadge"></span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc"></p>
+      <div class="modal-footer">
+        <button class="modal-close-btn" onclick="closeModalDirect()">Cerrar</button>
+        <a href="https://wa.me/524493667791" target="_blank" class="modal-wa-btn">
+          💬 Solicitar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WhatsApp -->
+<a href="https://wa.me/524493667791" target="_blank" class="whatsapp-btn" title="WhatsApp">💬</a>
+<a href="#" class="back-to-top" id="backToTop">↑</a>
+
+<footer>
+  <div class="container">
+    <p>© 2026 <strong>Materiales San José</strong> — Tepezalá, Aguascalientes.</p>
+  </div>
+</footer>
+
+<script>
+if (window.lucide) lucide.createIcons();
+document.addEventListener('DOMContentLoaded', () => { if (window.lucide) lucide.createIcons(); });
+
+/* Mobile menu */
+document.getElementById('mobile-menu-button')?.addEventListener('click', () => {
+  document.getElementById('mobile-menu').classList.toggle('open');
+});
+
+/* Back to top */
+window.addEventListener('scroll', () => {
+  document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 400);
+});
+
+/* Filter */
+function filterCat(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const cards = document.querySelectorAll('.product-card');
+  let count = 0;
+  cards.forEach((c, i) => {
+    const show = cat === 'all' || c.classList.contains(cat);
+    c.classList.toggle('hidden', !show);
+    if (show) {
+      count++;
+      c.style.animationDelay = (count * 0.03) + 's';
+      c.style.animation = 'none';
+      void c.offsetHeight;
+      c.style.animation = 'cardIn 0.5s ease both';
+    }
+  });
+  document.getElementById('showingCount').textContent = count;
+}
+
+/* Modal */
+const catBadgeClasses = {
+  agregados:'badge-agregados', acero:'badge-acero', mamposteria:'badge-mamposteria',
+  losa:'badge-losa', tuberia:'badge-tuberia', cemento:'badge-cemento', servicios:'badge-servicios'
+};
+const catLabels = {
+  agregados:'Mat. Construcción', acero:'Acero', mamposteria:'Mampostería',
+  losa:'Losas', tuberia:'Tubería', cemento:'Aglomerantes', servicios:'Servicio'
+};
+
+function openModal(title, desc, img, cat) {
+  document.getElementById('modalTitle').textContent = title;
+  document.getElementById('modalDesc').textContent = desc;
+  document.getElementById('modalImg').src = img;
+  const badge = document.getElementById('modalBadge');
+  badge.textContent = catLabels[cat] || cat;
+  badge.className = 'modal-cat-badge ' + (catBadgeClasses[cat] || '');
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(e) {
+  if (e.target === document.getElementById('modalOverlay')) closeModalDirect();
+}
+
+function closeModalDirect() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDirect(); });
+</script>
+</body>
+</html>
