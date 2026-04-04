@@ -10,18 +10,27 @@
 </head>
 <body>
 
+<!-- BLOBS Y FORMAS — fuera del header, cubren toda la página -->
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div class="float-shape" style="top:10%;left:5%;--dur:7s"><span class="shape-icon" style="--size:22px;--color:rgba(96,165,250,0.5)">◆</span></div>
+<div class="float-shape" style="top:25%;right:6%;--dur:9s;--delay:-3s"><span class="shape-icon" style="--size:16px;--color:rgba(249,115,22,0.5)">✦</span></div>
+<div class="float-shape" style="top:50%;left:3%;--dur:11s;--delay:-5s"><div class="shape-ring" style="--size:18px;--color:rgba(96,165,250,0.4)"></div></div>
+<div class="float-shape" style="top:70%;right:4%;--dur:8s;--delay:-2s"><div class="shape-diamond" style="--size:12px;--color:rgba(249,115,22,0.35)"></div></div>
+<div class="float-shape" style="top:40%;right:8%;--dur:6s;--delay:-1s"><span class="shape-icon" style="--size:18px;--color:rgba(96,165,250,0.3)">⬡</span></div>
+<div class="float-shape" style="top:85%;left:8%;--dur:10s;--delay:-4s"><span class="shape-icon" style="--size:14px;--color:rgba(249,115,22,0.3)">◆</span></div>
+<div class="float-shape" style="top:60%;right:12%;--dur:13s;--delay:-6s"><div class="shape-ring" style="--size:22px;--color:rgba(96,165,250,0.25)"></div></div>
+
 <!-- NAV -->
 <nav class="nav-container">
   <div class="container">
     <div class="nav-wrapper">
       <div class="nav-logo">
-        <img src="../img/logo.jpg" alt="Materiales San José" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-        <span class="nav-logo-text" style="display:none">Materiales <span>San José</span></span>
+         <img src="" alt="Materiales San José" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+         <span class="nav-logo-text" style="display:none">Materiales <span>San José</span></span>
       </div>
       <div class="nav-menu-desktop">
         <a href="../index.html">Inicio</a>
-        <a href="../index.html#materiales">Materiales</a>
-        <a href="../index.html#contacto">Contacto</a>
         <a href="../html/productos.html" class="active">Catálogo</a>
       </div>
       <button id="mobile-menu-button" aria-label="Menú">
@@ -39,16 +48,6 @@
 
 <!-- PAGE HEADER -->
 <div class="page-header">
-  <div class="blob blob-1"></div>
-  <div class="blob blob-2"></div>
-
-  <!-- Floating shapes -->
-  <div class="float-shape" style="top:20%;left:8%;--dur:7s"><span class="shape-icon" style="--size:22px;--color:rgba(96,165,250,0.5)">◆</span></div>
-  <div class="float-shape" style="top:30%;right:10%;--dur:9s;--delay:-3s"><span class="shape-icon" style="--size:16px;--color:rgba(249,115,22,0.5)">✦</span></div>
-  <div class="float-shape" style="bottom:20%;left:12%;--dur:11s;--delay:-5s"><div class="shape-ring" style="--size:18px;--color:rgba(96,165,250,0.4)"></div></div>
-  <div class="float-shape" style="bottom:25%;right:9%;--dur:8s;--delay:-2s"><div class="shape-diamond" style="--size:12px;--color:rgba(249,115,22,0.35)"></div></div>
-  <div class="float-shape" style="top:15%;right:25%;--dur:6s;--delay:-1s"><span class="shape-icon" style="--size:18px;--color:rgba(96,165,250,0.3)">⬡</span></div>
-
   <div class="container" style="position:relative;z-index:2">
     <div class="page-header-badge">📦 Inventario Completo</div>
     <h1>Catálogo de Materiales</h1>
@@ -60,9 +59,9 @@
 <div class="filter-wrap">
   <div class="filter-label">✦ Explorar por categoría ✦</div>
   <div class="filter-bar">
-    <button class="filter-btn active" onclick="filterCat('all',this)">🔲 Todos <span class="filter-count">47</span></button>
+    <button class="filter-btn active" onclick="filterCat('all',this)">🔲 Todos <span class="filter-count">43</span></button>
     <button class="filter-btn" onclick="filterCat('agregados',this)">🪨 Mat. Construcción <span class="filter-count">8</span></button>
-    <button class="filter-btn" onclick="filterCat('acero',this)">⚙️ Acero <span class="filter-count">10</span></button>
+    <button class="filter-btn" onclick="filterCat('acero',this)">⚙️ Acero <span class="filter-count">8</span></button>
     <button class="filter-btn" onclick="filterCat('mamposteria',this)">🧱 Mampostería <span class="filter-count">5</span></button>
     <button class="filter-btn" onclick="filterCat('losa',this)">🏗️ Losas <span class="filter-count">4</span></button>
     <button class="filter-btn" onclick="filterCat('tuberia',this)">🔩 Tubería <span class="filter-count">3</span></button>
@@ -75,34 +74,34 @@
 <section class="products-section">
   <div class="container">
     <div class="showing-wrap">
-      <span class="showing-badge">✦ Mostrando <span class="cnt" id="showingCount">47</span> materiales</span>
+      <span class="showing-badge">✦ Mostrando <span class="cnt" id="showingCount">43</span> materiales</span>
     </div>
 
     <div class="products-grid" id="productsGrid">
 
       <!-- AGREGADOS -->
-      <div class="product-card agregados" onclick="openModal('Arena','Ideal para mezclas de concreto, morteros y rellenos. Disponible en diferentes granulometrías.','../img/arena.jpg','agregados')">
+      <div class="product-card agregados" onclick="openModal('Arena','Ideal para mezclas de concreto, morteros y rellenos. Disponible en diferentes granulometrías.','../img/IMG47.jpg','agregados')">
         <img src="../img/IMG47.jpg" alt="Arena">
         <div class="product-info"><h3>Arena</h3><span class="product-badge badge-agregados">Construcción</span></div>
       </div>
-      <div class="product-card agregados" onclick="openModal('Grava','Grava triturada y rodada para concreto, drenajes y cimentaciones.','../img/grava.jpg','agregados')">
+      <div class="product-card agregados" onclick="openModal('Grava','Grava triturada y rodada para concreto, drenajes y cimentaciones.','../img/IMG46.jpg','agregados')">
         <img src="../img/IMG46.jpg" alt="Grava">
         <div class="product-info"><h3>Grava</h3><span class="product-badge badge-agregados">Construcción</span></div>
       </div>
-      <div class="product-card agregados" onclick="openModal('Piedra','Piedra para cimentaciones, muros de contención y revestimientos.','../img/piedra.jpg','agregados')">
+      <div class="product-card agregados" onclick="openModal('Piedra','Piedra para cimentaciones, muros de contención y revestimientos.','../img/IMG44.jpg','agregados')">
         <img src="../img/IMG44.jpg" alt="Piedra">
         <div class="product-info"><h3>Piedra</h3><span class="product-badge badge-agregados">Construcción</span></div>
       </div>
-      <div class="product-card agregados" onclick="openModal('Tepetate','Material de relleno y compactación para bases y subbases.','../img/Tepetate.jpg','agregados')">
+      <div class="product-card agregados" onclick="openModal('Tepetate','Material de relleno y compactación para bases y subbases.','../img/IMG48.jpg','agregados')">
         <img src="../img/IMG48.jpg" alt="Tepetate">
         <div class="product-info"><h3>Tepetate</h3><span class="product-badge badge-agregados">Construcción</span></div>
       </div>
-      <div class="product-card agregados" onclick="openModal('Jal','Material ligero para rellenos y mezclas especiales.','../img/material.jpg','agregados')">
-        <img src="../img/material.jpg" alt="Jal">
+      <div class="product-card agregados" onclick="openModal('Jal','Material ligero para rellenos y mezclas especiales.','../img/JAL.webp','agregados')">
+        <img src="../img/JAL.webp" alt="Jal">
         <div class="product-info"><h3>Jal</h3><span class="product-badge badge-agregados">Construcción</span></div>
       </div>
-      <div class="product-card agregados" onclick="openModal('Tierra fértil','Tierra negra para jardines, huertos y áreas verdes.','../img/material.jpg','agregados')">
-        <img src="../img/material.jpg" alt="Tierra fértil">
+      <div class="product-card agregados" onclick="openModal('Tierra fértil','Tierra negra para jardines, huertos y áreas verdes.','../img/tierra.jpeg','agregados')">
+        <img src="../img/tierra.jpeg" alt="Tierra fértil">
         <div class="product-info"><h3>Tierra fértil</h3><span class="product-badge badge-agregados">Construcción</span></div>
       </div>
       <div class="product-card agregados" onclick="openModal('Sello','Material fino para sellado de juntas y acabados de pisos.','../img/material.jpg','agregados')">
@@ -115,40 +114,32 @@
       </div>
 
       <!-- ACERO -->
-      <div class="product-card acero" onclick="openModal('Varilla 3/8 pulgada','Varilla corrugada de 3/8 pulgada para trabes, castillos y cadenas.','../img/varilla.jpg','acero')">
-        <img src="../img/varilla.jpg" alt="Varilla">
+      <div class="product-card acero" onclick="openModal('Varilla 3/8 pulgada','Varilla corrugada de 3/8 pulgada para trabes, castillos y cadenas.','../img/varilla1.webp','acero')">
+        <img src="../img/varilla1.webp" alt="Varilla">
         <div class="product-info"><h3>Varilla 3/8"</h3><span class="product-badge badge-acero">Acero</span></div>
       </div>
-      <div class="product-card acero" onclick="openModal('Varilla 1/2 pulgada','Varilla corrugada de 1/2 pulgada para estructuras de mayor carga.','../img/varilla.jpg','acero')">
-        <img src="../img/varilla.jpg" alt="Varilla">
+      <div class="product-card acero" onclick="openModal('Varilla 1/2 pulgada','Varilla corrugada de 1/2 pulgada para estructuras de mayor carga.','../img/varilla2.webp','acero')">
+        <img src="../img/varilla2.webp" alt="Varilla">
         <div class="product-info"><h3>Varilla 1/2"</h3><span class="product-badge badge-acero">Acero</span></div>
       </div>
-      <div class="product-card acero" onclick="openModal('Armex reforzado cadena','Malla prefabricada de alta resistencia para cadenas de cimentación.','../img/material.jpg','acero')">
-        <img src="../img/material.jpg" alt="Armex">
+      <div class="product-card acero" onclick="openModal('Armex reforzado cadena','Malla prefabricada de alta resistencia para cadenas de cimentación.','../img/armexcadena.webp','acero')">
+        <img src="../img/armexcadena.webp" alt="Armex">
         <div class="product-info"><h3>Armex ref. cadena</h3><span class="product-badge badge-acero">Acero</span></div>
       </div>
-      <div class="product-card acero" onclick="openModal('Armex reforzado castillo','Armex prefabricado para castillos de muros de carga.','../img/material.jpg','acero')">
-        <img src="../img/material.jpg" alt="Armex">
+      <div class="product-card acero" onclick="openModal('Armex reforzado castillo','Armex prefabricado para castillos de muros de carga.','../img/armexcastillo.jpg','acero')">
+        <img src="../img/armexcastillo.jpg" alt="Armex">
         <div class="product-info"><h3>Armex ref. castillo</h3><span class="product-badge badge-acero">Acero</span></div>
-      </div>
-      <div class="product-card acero" onclick="openModal('Armex sencillo cadena','Malla simple para cadenas en proyectos residenciales.','../img/material.jpg','acero')">
-        <img src="../img/material.jpg" alt="Armex">
-        <div class="product-info"><h3>Armex s. cadena</h3><span class="product-badge badge-acero">Acero</span></div>
-      </div>
-      <div class="product-card acero" onclick="openModal('Armex sencillo castillo','Armex simple para castillos en proyectos ligeros.','../img/material.jpg','acero')">
-        <img src="../img/material.jpg" alt="Armex">
-        <div class="product-info"><h3>Armex s. castillo</h3><span class="product-badge badge-acero">Acero</span></div>
       </div>
       <div class="product-card acero" onclick="openModal('Malla electrosoldada sencilla','Malla de acero para losas y contrapisos ligeros.','../img/malla.jpg','acero')">
         <img src="../img/malla.jpg" alt="Malla">
         <div class="product-info"><h3>Malla electrosoldada s.</h3><span class="product-badge badge-acero">Acero</span></div>
       </div>
-      <div class="product-card acero" onclick="openModal('Malla electrosoldada reforzada','Malla de alta resistencia para losas industriales y estacionamientos.','../img/malla.jpg','acero')">
-        <img src="../img/malla.jpg" alt="Malla">
+      <div class="product-card acero" onclick="openModal('Malla electrosoldada reforzada','Malla de alta resistencia para losas industriales y estacionamientos.','../img/mallae.webp','acero')">
+        <img src="../img/mallae.webp" alt="Malla">
         <div class="product-info"><h3>Malla electrosoldada r.</h3><span class="product-badge badge-acero">Acero</span></div>
       </div>
-      <div class="product-card acero" onclick="openModal('Anillo de alambrón','Alambrón en rollo para armado de estructuras y cercas.','../img/material.jpg','acero')">
-        <img src="../img/material.jpg" alt="Alambrón">
+      <div class="product-card acero" onclick="openModal('Anillo de alambrón','Alambrón en rollo para armado de estructuras y cercas.','../img/anillo.webp','acero')">
+        <img src="../img/anillo.webp" alt="Alambrón">
         <div class="product-info"><h3>Anillo de alambrón</h3><span class="product-badge badge-acero">Acero</span></div>
       </div>
       <div class="product-card acero" onclick="openModal('Alambre recocido','Alambre suave para amarre de varilla en estructuras de concreto.','../img/alambre.jpg','acero')">
@@ -157,24 +148,24 @@
       </div>
 
       <!-- MAMPOSTERÍA -->
-      <div class="product-card mamposteria" onclick="openModal('Block hueco 12x20x40','Block estándar de hormigón para muros interiores y exteriores.','../img/block.jpg','mamposteria')">
-        <img src="../img/block.jpg" alt="Block">
+      <div class="product-card mamposteria" onclick="openModal('Block hueco 12x20x40','Block estándar de hormigón para muros interiores y exteriores.','../img/blocck2.webp','mamposteria')">
+        <img src="../img/blocck2.webp" alt="Block">
         <div class="product-info"><h3>Block 12x20x40</h3><span class="product-badge badge-mamposteria">Mampostería</span></div>
       </div>
-      <div class="product-card mamposteria" onclick="openModal('Block hueco 15x20x40','Block de mayor espesor para muros estructurales y bardas.','../img/block.jpg','mamposteria')">
-        <img src="../img/block.jpg" alt="Block">
+      <div class="product-card mamposteria" onclick="openModal('Block hueco 15x20x40','Block de mayor espesor para muros estructurales y bardas.','../img/blocck1.webp','mamposteria')">
+        <img src="../img/blocck1.webp" alt="Block">
         <div class="product-info"><h3>Block 15x20x40</h3><span class="product-badge badge-mamposteria">Mampostería</span></div>
       </div>
-      <div class="product-card mamposteria" onclick="openModal('Tabicón','Pieza de concreto sólido de alta resistencia para muros y cimientos.','../img/material.jpg','mamposteria')">
-        <img src="../img/material.jpg" alt="Tabicón">
+      <div class="product-card mamposteria" onclick="openModal('Tabicón','Pieza de concreto sólido de alta resistencia para muros y cimientos.','../img/tabicon.jpg','mamposteria')">
+        <img src="../img/tabicon.jpg" alt="Tabicón">
         <div class="product-info"><h3>Tabicón</h3><span class="product-badge badge-mamposteria">Mampostería</span></div>
       </div>
       <div class="product-card mamposteria" onclick="openModal('Ladrillo','Ladrillo recocido para muros, bardas y acabados decorativos.','../img/ladrillo.jpg','mamposteria')">
         <img src="../img/ladrillo.jpg" alt="Ladrillo">
         <div class="product-info"><h3>Ladrillo</h3><span class="product-badge badge-mamposteria">Mampostería</span></div>
       </div>
-      <div class="product-card mamposteria" onclick="openModal('Cuña','Pieza de remate para esquinas y terminados en mampostería.','../img/material.jpg','mamposteria')">
-        <img src="../img/material.jpg" alt="Cuña">
+      <div class="product-card mamposteria" onclick="openModal('Cuña','Pieza de remate para esquinas y terminados en mampostería.','../img/cuña.webp','mamposteria')">
+        <img src="../img/cuña.webp" alt="Cuña">
         <div class="product-info"><h3>Cuña</h3><span class="product-badge badge-mamposteria">Mampostería</span></div>
       </div>
 
@@ -187,26 +178,26 @@
         <img src="../img/material.jpg" alt="Vigueta">
         <div class="product-info"><h3>Vigueta reforzada</h3><span class="product-badge badge-losa">Losas</span></div>
       </div>
-      <div class="product-card losa" onclick="openModal('Casetón poliestireno','Relleno ligero de poliestireno para reducir el peso en losas.','../img/material.jpg','losa')">
-        <img src="../img/material.jpg" alt="Casetón">
+      <div class="product-card losa" onclick="openModal('Casetón poliestireno','Relleno ligero de poliestireno para reducir el peso en losas.','../img/casseton.png','losa')">
+        <img src="../img/casseton.png" alt="Casetón">
         <div class="product-info"><h3>Casetón poliestireno</h3><span class="product-badge badge-losa">Losas</span></div>
       </div>
-      <div class="product-card losa" onclick="openModal('Bovedilla de Jal','Bovedilla de jal ligero para sistemas de losa vigueta-bovedilla.','../img/material.jpg','losa')">
-        <img src="../img/material.jpg" alt="Bovedilla">
+      <div class="product-card losa" onclick="openModal('Bovedilla de Jal','Bovedilla de jal ligero para sistemas de losa vigueta-bovedilla.','../img/BOVEDILLA-JAL.png','losa')">
+        <img src="../img/BOVEDILLA-JAL.png" alt="Bovedilla">
         <div class="product-info"><h3>Bovedilla de Jal</h3><span class="product-badge badge-losa">Losas</span></div>
       </div>
 
       <!-- TUBERÍA -->
-      <div class="product-card tuberia" onclick="openModal('Tubería PVC','Tubería de PVC para instalaciones hidráulicas y sanitarias.','../img/material.jpg','tuberia')">
-        <img src="../img/material.jpg" alt="Tubería PVC">
+      <div class="product-card tuberia" onclick="openModal('Tubería PVC','Tubería de PVC para instalaciones hidráulicas y sanitarias.','../img/pvc.jpg','tuberia')">
+        <img src="../img/pvc.jpg" alt="Tubería PVC">
         <div class="product-info"><h3>Tubería PVC</h3><span class="product-badge badge-tuberia">Tubería</span></div>
       </div>
-      <div class="product-card tuberia" onclick="openModal('Tubería CPVC','Tubería CPVC resistente a altas temperaturas para agua caliente.','../img/material.jpg','tuberia')">
-        <img src="../img/material.jpg" alt="Tubería CPVC">
+      <div class="product-card tuberia" onclick="openModal('Tubería CPVC','Tubería CPVC resistente a altas temperaturas para agua caliente.','../img/cpvc.webp','tuberia')">
+        <img src="../img/cpvc.webp" alt="Tubería CPVC">
         <div class="product-info"><h3>Tubería CPVC</h3><span class="product-badge badge-tuberia">Tubería</span></div>
       </div>
-      <div class="product-card tuberia" onclick="openModal('Tubería PPR','Tubería PPR de alta resistencia para sistemas de agua a presión.','../img/material.jpg','tuberia')">
-        <img src="../img/material.jpg" alt="Tubería PPR">
+      <div class="product-card tuberia" onclick="openModal('Tubería PPR','Tubería PPR de alta resistencia para sistemas de agua a presión.','../img/ppr.webp','tuberia')">
+        <img src="../img/ppr.webp" alt="Tubería PPR">
         <div class="product-info"><h3>Tubería PPR</h3><span class="product-badge badge-tuberia">Tubería</span></div>
       </div>
 
@@ -223,16 +214,16 @@
         <img src="../img/pegapiso.jpg" alt="Pegapiso">
         <div class="product-info"><h3>Pegapiso</h3><span class="product-badge badge-cemento">Aglomerantes</span></div>
       </div>
-      <div class="product-card cemento" onclick="openModal('Pegaazulejo','Adhesivo para azulejos en paredes interiores y exteriores.','../img/material.jpg','cemento')">
-        <img src="../img/material.jpg" alt="Pegaazulejo">
+      <div class="product-card cemento" onclick="openModal('Pegaazulejo','Adhesivo para azulejos en paredes interiores y exteriores.','../img/pegaazulejo.png','cemento')">
+        <img src="../img/pegaazulejo.png" alt="Pegaazulejo">
         <div class="product-info"><h3>Pegaazulejo</h3><span class="product-badge badge-cemento">Aglomerantes</span></div>
       </div>
-      <div class="product-card cemento" onclick="openModal('Stucco','Yeso acrílico para acabados exteriores e interiores texturizados.','../img/material.jpg','cemento')">
-        <img src="../img/material.jpg" alt="Stucco">
+      <div class="product-card cemento" onclick="openModal('Stucco','Yeso acrílico para acabados exteriores e interiores texturizados.','../img/stucco.jpg','cemento')">
+        <img src="../img/stucco.jpg" alt="Stucco">
         <div class="product-info"><h3>Stucco</h3><span class="product-badge badge-cemento">Aglomerantes</span></div>
       </div>
-      <div class="product-card cemento" onclick="openModal('Cal','Cal hidratada para aplanados, pintura y tratamiento de suelos.','../img/material.jpg','cemento')">
-        <img src="../img/material.jpg" alt="Cal">
+      <div class="product-card cemento" onclick="openModal('Cal','Cal hidratada para aplanados, pintura y tratamiento de suelos.','../img/cal.png','cemento')">
+        <img src="../img/cal.png" alt="Cal">
         <div class="product-info"><h3>Cal</h3><span class="product-badge badge-cemento">Aglomerantes</span></div>
       </div>
       <div class="product-card cemento" onclick="openModal('Yeso','Yeso para aplanados interiores, cielos rasos y molduras.','../img/yeso.png','cemento')">
@@ -241,36 +232,36 @@
       </div>
 
       <!-- SERVICIOS -->
-      <div class="product-card servicios" onclick="openModal('Renta retroexcavadora','Retroexcavadora disponible por hora o día para excavaciones y movimiento de tierra.','../img/maquinaria.jpg','servicios')">
-        <img src="../img/maquinaria.jpg" alt="Retroexcavadora">
-        <div class="product-info"><h3>Renta retroexcavadora</h3><span class="product-badge badge-servicios">Servicio</span></div>
+      <div class="product-card servicios" onclick="openModal('Renta retroexcavadora','Retroexcavadora disponible por hora o día para excavaciones y movimiento de tierra.','../img/IMG39.jpg','servicios')">
+        <img src="../img/IMG39.jpg" alt="Retroexcavadora">
+        <div class="product-info"><h3>retroexcavadora</h3><span class="product-badge badge-servicios">Servicio</span></div>
       </div>
-      <div class="product-card servicios" onclick="openModal('Renta camión plataforma','Camión plataforma para traslado de materiales pesados y maquinaria.','../img/maquinaria.jpg','servicios')">
-        <img src="../img/maquinaria.jpg" alt="Camión">
-        <div class="product-info"><h3>Renta camión plataforma</h3><span class="product-badge badge-servicios">Servicio</span></div>
+      <div class="product-card servicios" onclick="openModal('Renta camión plataforma','Camión plataforma para traslado de materiales pesados y maquinaria.','../img/IMG24.jpg','servicios')">
+        <img src="../img/IMG24.jpg" alt="Camión">
+        <div class="product-info"><h3>camión plataforma</h3><span class="product-badge badge-servicios">Servicio</span></div>
       </div>
-      <div class="product-card servicios" onclick="openModal('Renta camión 14m³','Camión de volteo de 14 metros cúbicos para entrega de materiales a granel.','../img/maquinaria.jpg','servicios')">
-        <img src="../img/maquinaria.jpg" alt="Camión">
-        <div class="product-info"><h3>Renta camión 14m³</h3><span class="product-badge badge-servicios">Servicio</span></div>
+      <div class="product-card servicios" onclick="openModal('Renta camión 14m³','Camión de volteo de 14 metros cúbicos para entrega de materiales a granel.','../img/IMG38.jpg','servicios')">
+        <img src="../img/IMG38.jpg" alt="Camión">
+        <div class="product-info"><h3>camión 14m³</h3><span class="product-badge badge-servicios">Servicio</span></div>
       </div>
-      <div class="product-card servicios" onclick="openModal('Cortadora de concreto','Corte preciso en concreto, block y pavimentos. Disponible por turno.','../img/maquinaria.jpg','servicios')">
-        <img src="../img/maquinaria.jpg" alt="Cortadora">
+      <div class="product-card servicios" onclick="openModal('Cortadora de concreto','Corte preciso en concreto, block y pavimentos. Disponible por turno.','../img/IMG6.jpg','servicios')">
+        <img src="../img/IMG6.jpg" alt="Cortadora">
         <div class="product-info"><h3>Cortadora concreto</h3><span class="product-badge badge-servicios">Servicio</span></div>
       </div>
-      <div class="product-card servicios" onclick="openModal('Allanadora','Allanadora mecánica para acabados de pisos de concreto.','../img/maquinaria.jpg','servicios')">
-        <img src="../img/maquinaria.jpg" alt="Allanadora">
+      <div class="product-card servicios" onclick="openModal('Allanadora','Allanadora mecánica para acabados de pisos de concreto.','../img/allanadora.jpg','servicios')">
+        <img src="../img/allanadora.jpg" alt="Allanadora">
         <div class="product-info"><h3>Allanadora</h3><span class="product-badge badge-servicios">Servicio</span></div>
       </div>
-      <div class="product-card servicios" onclick="openModal('Apisonadora','Compactación de suelos, rellenos y bases para pavimentación.','../img/maquinaria.jpg','servicios')">
-        <img src="../img/maquinaria.jpg" alt="Apisonadora">
+      <div class="product-card servicios" onclick="openModal('Apisonadora','Compactación de suelos, rellenos y bases para pavimentación.','../img/apisonadora.jpg','servicios')">
+        <img src="../img/apisonadora.jpg" alt="Apisonadora">
         <div class="product-info"><h3>Apisonadora</h3><span class="product-badge badge-servicios">Servicio</span></div>
       </div>
-      <div class="product-card servicios" onclick="openModal('Venta y renta de madera','Madera para cimbra, duelas, vigas y estructuras temporales de obra.','../img/material.jpg','servicios')">
-        <img src="../img/material.jpg" alt="Madera">
-        <div class="product-info"><h3>Venta y renta madera</h3><span class="product-badge badge-servicios">Servicio</span></div>
+      <div class="product-card servicios" onclick="openModal('Venta y renta de madera','Madera para cimbra, duelas, vigas y estructuras temporales de obra.','../img/IMG50.jpg','servicios')">
+        <img src="../img/IMG50.jpg" alt="Madera">
+        <div class="product-info"><h3>madera</h3><span class="product-badge badge-servicios">Servicio</span></div>
       </div>
-      <div class="product-card servicios" onclick="openModal('Aceites y lubricantes','Lubricantes para maquinaria de construcción y mantenimiento de equipos.','../img/material.jpg','servicios')">
-        <img src="../img/material.jpg" alt="Aceites">
+      <div class="product-card servicios" onclick="openModal('Aceites y lubricantes','Lubricantes para maquinaria de construcción y mantenimiento de equipos.','../img/IMG18.jpg','servicios')">
+        <img src="../img/IMG18.jpg" alt="Aceites">
         <div class="product-info"><h3>Aceites y lubricantes</h3><span class="product-badge badge-servicios">Servicio</span></div>
       </div>
 
@@ -281,7 +272,9 @@
 <!-- MODAL -->
 <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
   <div class="modal-box">
-    <img class="modal-img" id="modalImg" src="" alt="">
+    <div class="modal-img-container">
+      <img class="modal-img" id="modalImg" src="" alt="">
+    </div>
     <div class="modal-body">
       <span class="modal-cat-badge" id="modalBadge"></span>
       <h2 id="modalTitle"></h2>
@@ -310,23 +303,20 @@
 if (window.lucide) lucide.createIcons();
 document.addEventListener('DOMContentLoaded', () => { if (window.lucide) lucide.createIcons(); });
 
-/* Mobile menu */
 document.getElementById('mobile-menu-button')?.addEventListener('click', () => {
   document.getElementById('mobile-menu').classList.toggle('open');
 });
 
-/* Back to top */
 window.addEventListener('scroll', () => {
   document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 400);
 });
 
-/* Filter */
 function filterCat(cat, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   const cards = document.querySelectorAll('.product-card');
   let count = 0;
-  cards.forEach((c, i) => {
+  cards.forEach((c) => {
     const show = cat === 'all' || c.classList.contains(cat);
     c.classList.toggle('hidden', !show);
     if (show) {
@@ -340,7 +330,6 @@ function filterCat(cat, btn) {
   document.getElementById('showingCount').textContent = count;
 }
 
-/* Modal */
 const catBadgeClasses = {
   agregados:'badge-agregados', acero:'badge-acero', mamposteria:'badge-mamposteria',
   losa:'badge-losa', tuberia:'badge-tuberia', cemento:'badge-cemento', servicios:'badge-servicios'

@@ -62,3 +62,19 @@ function goToSlide(idx) {
 }
 
 setInterval(() => goToSlide((heroIdx + 1) % heroImgs.length), 3000);
+
+
+const modalImg = document.getElementById('modalImg');
+const modalContainer = document.querySelector('.modal-img-container');
+
+modalContainer.addEventListener('mousemove', (e) => {
+  const rect = modalContainer.getBoundingClientRect();
+  const x = ((e.clientX - rect.left) / rect.width) * 100;
+  const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+  modalImg.style.transformOrigin = `${x}% ${y}%`;
+});
+
+modalContainer.addEventListener('mouseleave', () => {
+  modalImg.style.transformOrigin = 'center';
+});
